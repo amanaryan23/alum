@@ -1,7 +1,3 @@
-<body>
-  {{> main}}
-</body>
-
 <template name="main">
   
 
@@ -16,8 +12,8 @@
       <div class="row" >
 
         <ul class="nav navbar-nav">
-          <li> <a href="#" class="requst"> Request Doc</a></li>
-          <li><a href="#" class="check"> Check Status</a></li>
+          <li> <a href="{{pathFor route='requestDoc'}}" class="requst"> Request Doc</a></li>
+          <li><a href="{{pathFor route = 'checkStatus'}}" class="check"> Check Status</a></li>
         </ul>
       </div>
       
