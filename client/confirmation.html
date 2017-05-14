@@ -1,5 +1,62 @@
 <template name="confirmation">
-	
+
+	<h2> Your Details </h2>
+
+	<div class="row">
+		<div class="col-sm-2"></div>
+
+		<div class="col-sm-8">
+			<div class="row">
+				{{#with userDetails}}
+					<p>First Name : {{firstName}}</p>
+
+					<p>Last Name : {{lastName}}</p>
+
+					<p>contact Num : {{phone}}</p>
+
+					<p> Email : {{email}} </p>
+
+					 <p> Address : {{address}} </p>
+
+					 <p>City : {{city}} </p>
+
+					 <p>State : {{state}}</p>
+
+					 <p>Pin : {{zip}}</p>
+
+				{{/with}}
+
+				<p>	Documents Required : </p>
+
+				{{#each docDetails}}	
+					
+					<ul> 
+						<li>{{this}}</li>
+					</ul>
+				{{/each}}
+			</div>
+
+		</div>
+
+		<div class="col-sm-2"></div>
+			
+	</div>
+
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-2">
+			<button type="submit" class="btn btn-warning" > Go Back <span class="glyphicon glyphicon-send"></span></button>
+		</div>
+		<div class="col-sm-1"></div>
+		<div class="col-sm-2">
+			<button type="submit" class="btn btn-primary" > Go to detals<span class="glyphicon glyphicon-send"></span></button>
+		</div>
+		<div class="col-sm-1"></div>
+		<div class="col-sm-2">
+			<button type="submit" class="btn btn-default" > Go<span class="glyphicon glyphicon-send"></span></button>
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
 	
 
 </template>
