@@ -1,3 +1,35 @@
+Template.requestDoc.helpers({
+	
+	'firstname': function(){
+		var id = Meteor.userId();
+		return UserDetails.findOne({userId:id}).firstName;
+		
+		// console.log(user);
+	},
+
+	'lastname': function(){
+		var id = Meteor.userId();
+		return UserDetails.findOne({userId:id}).lastName;
+		
+		// console.log(user);
+	},
+
+	'Email': function(){
+		var id = Meteor.userId();
+		return UserDetails.findOne({userId:id}).email;
+		// console.log(user);
+	},
+
+	'phoneNum': function(){
+		var id = Meteor.userId();
+		return UserDetails.findOne({userId:id}).phone;
+	}
+
+
+
+});
+
+
 Template.requestDoc.events({
 	'click .btn-warning' : function(event){
 		event.preventDefault();
@@ -11,6 +43,7 @@ Template.requestDoc.events({
 		var zip = $('[name=zip]').val();
 
 		var id = UserDetails.insert({
+			createdAt : new Date(),
 			firstName : firstName,
 			lastName : lastName,
 			email : email,
@@ -18,11 +51,14 @@ Template.requestDoc.events({
 			address : address,
 			city : city,
 			state : state,
-			zip : zip
+			zip : zip,
+			userId : Meteor.userId()
 		});
 
 		console.log(id);
+		console.log(Meteor.userId());
 		Session.set('userId',id);
+		Session.set('userEmail',email);
 
 		Router.go('documents');
 		
@@ -31,3 +67,4 @@ Template.requestDoc.events({
 	}
 
 });
+
