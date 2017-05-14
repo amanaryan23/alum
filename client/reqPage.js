@@ -5,7 +5,6 @@ Template.reqPage.helpers({
     console.log(user);
     reqDetails['candidateName'] = user.firstName + " " + user.lastName;
     reqDetails['requestedOn'] = moment(reqDetails.createdAt).format('YYYY-MMM-DD  HH:MM:SS');
-
     return reqDetails;
   }
 });
