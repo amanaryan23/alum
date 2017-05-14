@@ -23,6 +23,6 @@ Template.documents.events({
 
 		// Router.go('success');
 
-		Router.go('confirmation');
+		Router.go('success');
 	}
 });
