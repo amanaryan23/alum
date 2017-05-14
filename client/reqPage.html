@@ -1,0 +1,34 @@
+<template name="reqPage">
+  <div id="container">
+    <table class="table" id="table">
+      <thead>
+        <th>Attribute</th>
+        <th>Value</th>
+      </thead>
+      <tbody>
+        {{#with reqData}}
+        <tr>
+	        <td><strong>Documents Required</strong></td>
+	        <td>{{docs}}</td>
+	      </tr>
+        <tr>
+	        <td><strong>Candidate Name</strong></td>
+	        <td>{{candidateName}}</td>
+	      </tr>
+        <tr>
+	        <td><strong>Requested On</strong></td>
+	        <td>{{requestedOn}}</td>
+	      </tr>
+        <tr>
+	        <td><strong>Payment Status</strong></td>
+	        <td>Received</td>
+	      </tr>
+        <tr>
+	        <td><strong>Shipping Address</strong></td>
+	        <td>{{address}}</td>
+	      </tr>
+	      {{/with}}
+	    </tbody>
+	  </table>
+  </div>
+</template>
