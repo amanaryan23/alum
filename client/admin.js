@@ -6,10 +6,11 @@ Template.adminDash.helpers({
     for (var i = 0; i < reqs.length; i++) {
       reqs[i].index = i+1;
     }
+    console.log(reqs);
     return reqs;
   },
   name : function(userId){
-    var user = UserDetails.findOne({_id:userId });
+    var user = UserDetails.findOne({userId:userId });
     console.log(user);
     return user.firstName + " " + user.lastName;
   },

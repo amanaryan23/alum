@@ -19,6 +19,6 @@ Template.documents.events({
 			status : "processing"
 		});
 
-		Router.go('confirmation');
+		Router.go('success');
 	}
 });
