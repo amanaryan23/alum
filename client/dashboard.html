@@ -1,0 +1,25 @@
+<template name="dashboard">
+
+	<table class="table">
+		<thead>
+	      <tr>
+	        <th>Reqest id</th>
+	        <th>Date</th>
+	        <th>Document Requested</th>
+	        <th>Status</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    	{{#each requests}}
+	    		<tr>
+	    			<td>{{_id}}</td>
+	    			<td>{{createdAt}}</td>
+	    			<td>{{docs}}</td>
+	    			<td>{{status}}</td>
+	    		</tr>
+	    	{{/each}}
+	    </tbody>
+	</table>
+	
+
+</template>

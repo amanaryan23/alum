@@ -9,13 +9,16 @@ Template.documents.events({
     	});
 		console.log(arr);
 		var u = Session.get('userId');
-
+		var e = Session.get('userEmail');
+		console.log(Meteor.userId());
 		Requests.insert({
 			createdAt : new Date(),
-			userId : u,
-			docs : arr
+			userId : Meteor.userId(),
+			userEmail : e,
+			docs : arr,
+			status : "processing"
 		});
 
-		Router.go('success');
+		Router.go('confirmation');
 	}
 });
