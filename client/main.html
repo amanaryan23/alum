@@ -13,7 +13,7 @@
 
         <ul class="nav navbar-nav">
           <li> <a href="{{#if currentUser}}{{pathFor route='requestDoc'}}{{else}}{{pathFor route='register'}}{{/if}}" class="requst"> Request Doc</a></li>
-          <li><a href="{{pathFor route = 'dashboard'}}" class="check"> Dashboard </a></li>
+          <li><a href="{{#if currentUser}}{{pathFor route='dashboard'}}{{else}}{{pathFor route='register'}}{{/if}}" class="check"> Dashboard </a></li>
         </ul>
       </div>
       

@@ -23,6 +23,21 @@ Template.requestDoc.helpers({
 	'phoneNum': function(){
 		var id = Meteor.userId();
 		return UserDetails.findOne({userId:id}).phone;
+	},
+
+	'rollNum': function(){
+		var id = Meteor.userId();
+		return UserDetails.findOne({userId:id}).rollNum;
+	},
+
+	'branch': function(){
+		var id = Meteor.userId();
+		return UserDetails.findOne({userId:id}).branch;
+	},
+
+	'passingYear': function(){
+		var id = Meteor.userId();
+		return UserDetails.findOne({userId:id}).passingYear;
 	}
 
 
@@ -41,6 +56,9 @@ Template.requestDoc.events({
 		var city = $('[name=city]').val();
 		var state = $('[name=state]').val();
 		var zip = $('[name=zip]').val();
+		var branch = $('[name=branch]').val();
+		var passyear = $('[name=year_of_passing]').val();
+		var rollnum = $('[name=roll_num]').val();
 
 		var detailsUser = new Meteor.Collection(null);
 
@@ -58,6 +76,9 @@ Template.requestDoc.events({
 			createdAt : new Date(),
 			firstName : firstName,
 			lastName : lastName,
+			rollNum : rollnum,
+			branch : branch,
+			passingYear : passyear,
 			email : email,
 			phone : phone,
 			address : address,

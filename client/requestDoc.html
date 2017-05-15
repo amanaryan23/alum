@@ -1,5 +1,7 @@
 <template name="requestDoc">
 
+{{#if currentUser}}
+
 	<div class="container">
 
     <form class="well form-horizontal"  id="contact_form">
@@ -30,6 +32,42 @@
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <input name="last_name" placeholder="Last Name" class="form-control"  type="text" value="{{lastname}}">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Roll #</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="roll_num" placeholder="Roll Number" class="form-control"  type="text" value="{{rollNum}}">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Branch</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="branch" placeholder="Enter your branch" class="form-control"  type="text" value="{{branch}}">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Year of Passing</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="year_of_passing" placeholder="Enter your branch" class="form-control"  type="text" value="{{passingYear}}">
     </div>
   </div>
 </div>
@@ -124,5 +162,7 @@
 </form>
 </div>
     <!-- </div>/.container -->
+
+{{/if}}
 
 </template>
