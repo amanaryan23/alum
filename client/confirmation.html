@@ -1,5 +1,7 @@
 <template name="confirmation">
 
+	{{#if currentUser}}
+
 	<h2> Your Details </h2>
 
 	<div class="row">
@@ -12,6 +14,13 @@
 
 					<p>Last Name : {{lastName}}</p>
 
+					<p>Roll Number : {{rollNum}}</p>
+
+					<p>Branch : {{branch}}</p>
+
+					<p>Year of Passing : {{passingYear}}</p>					
+
+				
 					<p>contact Num : {{phone}}</p>
 
 					<p> Email : {{email}} </p>
@@ -57,6 +66,9 @@
 		</div>
 		<div class="col-sm-2"></div>
 	</div>
+	
+
+	{{/if}}
 	
 
 </template>
