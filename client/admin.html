@@ -8,6 +8,7 @@
 	        <th>Documents needed</th>
           <th>Received on</th>
           <th>Status</th>
+          <th></th>
 	      </tr>
 	    </thead>
 	    <tbody>
@@ -17,7 +18,8 @@
 	        <td>{{name userId}}</td>
 	        <td>{{docs}}</td>
           <td>{{creationDate createdAt}}</td>
-          <td>New | <a href="/req/{{_id}}">View more details</a></td>
+          <td>{{status}} | <a href="/req/{{_id}}">View more details</a></td>
+          <td><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></td>
 	      </tr>
 	      {{/each}}
 	    </tbody>
