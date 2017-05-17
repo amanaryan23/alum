@@ -37,6 +37,7 @@ htmljs@1.0.11
 http@1.2.12
 id-map@1.0.9
 insecure@1.0.7
+instamojo:instamojo@0.0.1
 iron:controller@1.0.12
 iron:core@1.0.11
 iron:dynamic-template@1.0.12
@@ -81,6 +82,7 @@ service-configuration@1.0.11
 session@1.1.7
 sha@1.0.9
 shell-server@0.2.3
+simple:reactive-method@1.0.2
 spacebars@1.0.15
 spacebars-compiler@1.1.2
 srp@1.0.10
