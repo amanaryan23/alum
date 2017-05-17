@@ -1,0 +1,45 @@
+<template name="userPage">
+  <div id="container">
+    <div id="container text-center">
+      <h1>Candidate Information</h1>
+    </div>
+    <table class="table" id="table">
+      <thead>
+        <th></th>
+        <th></th>
+      </thead>
+      <tbody>
+        {{#with userData}}
+        <tr>
+	        <td><strong>Name</strong></td>
+	        <td>{{name}}</td>
+	      </tr>
+        <tr>
+          <td><strong>Roll Number</strong></td>
+          <td>{{rollNum}}</td>
+	      </tr>
+        <tr>
+	        <td><strong>Year of Passing</strong></td>
+	        <td>{{passingYear}}</td>
+	      </tr>
+        <tr>
+	        <td><strong>Phone</strong></td>
+	        <td>{{phone}}</td>
+	      </tr>
+        <tr>
+	        <td><strong>E-mail address</strong></td>
+	        <td><a href="#"><span class="glyphicon glyphicon-envelope"></span></a> | {{email}}</td>
+	      </tr>
+        <tr>
+	        <td><strong>city</strong></td>
+	        <td>{{city}}</td>
+	      </tr>
+        <tr>
+	        <td><strong>Last Updated Address</strong></td>
+	        <td>{{address}}</td>
+	      </tr>
+	      {{/with}}
+	    </tbody>
+	  </table>
+  </div>
+</template>
