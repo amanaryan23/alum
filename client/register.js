@@ -10,7 +10,7 @@ Template.register.events({
 				
 			});
 
-			Router.go('/')
+			Router.go('/requestDoc')
 
 			
 

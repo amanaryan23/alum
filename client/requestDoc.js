@@ -25,7 +25,7 @@ Template.requestDoc.helpers({
 		return UserDetails.findOne({userId:id}).phone;
 	},
 
-	'rollNum': function(){
+	'rollnum': function(){
 		var id = Meteor.userId();
 		return UserDetails.findOne({userId:id}).rollNum;
 	},
