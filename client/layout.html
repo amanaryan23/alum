@@ -3,15 +3,36 @@
 	<nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="row">
-          <a class="navbar-brand" href="#">Alumni Request Portal</a>
+          <div class="col-sm-4">
+            <a class="navbar-brand" href="/">Alumni Request Portal</a>
+          </div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-3">
+                <ul class="nav navbar-nav">
+                  <!-- <li class="active"><a href="#" class="home">Home</a></li> -->
+                  <!-- <li><a href="#">Page 1</a></li> -->
+                 
+                  {{#if currentUser}}
+                    <li> <a href="#">{{> loginButtons}}</a></li>
+                  {{else}}
+
+                    
+                    <li class="active"><a href="{{pathFor route='register'}}">Register</a></li>
+                    <li> <a href="#">{{> loginButtons}}</a></li>
+                    
+                  {{/if}}
+                </ul>
+              
+          </div>
+          <div class="col-sm-1"></div>
         </div>
-        <ul class="nav navbar-nav">
+        <!-- <ul class="nav navbar-nav">
           <li class="active"><a href="#" class="home">Home</a></li>
           <li><a href="#">Page 1</a></li>
           <li><a href="#">Page 2</a></li>
 
           <li> <a href="#">{{> loginButtons}}</a></li>
-        </ul>
+        </ul> -->
 
 
       </div>

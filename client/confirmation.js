@@ -17,6 +17,10 @@ Template.confirmation.helpers({
 		
 			
 		return arr;
+	},
+
+	'total_price' : function(){
+		return Session.get('total');
 	}
 });
 
