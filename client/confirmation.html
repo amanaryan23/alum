@@ -2,45 +2,69 @@
 
 	{{#if currentUser}}
 
-	
+<div class="container">
+
 
 	<div class="row">
 		<div class="col-sm-2"></div>
 
 		<div class="col-sm-8">
-			<div class="row">
+			<div class="row well">
 				<h2 style="text-align: center;"> Your Details </h2>
 				{{#with userDetails}}
-					<p>First Name : {{firstName}}</p>
-
-					<p>Last Name : {{lastName}}</p>
-
-					<p>Roll Number : {{rollNum}}</p>
-
-					<p>Branch : {{branch}}</p>
-
-					<p>Year of Passing : {{passingYear}}</p>					
-
-				
-					<p>contact Num : {{phone}}</p>
-
-					<p> Email : {{email}} </p>
-
-					 <p> Address : {{address}} </p>
-
-					 <p>City : {{city}} </p>
-
-					 <p>State : {{state}}</p>
-
-					 <p>Pin : {{zip}}</p>
-
+				<table class="table table-hover">
+					<tr>
+						<td><strong>First Name</strong></td>
+						<td>{{firstName}}</td>
+					</tr>
+					<tr>
+						<td><strong>Last Name</strong></td>
+						<td>{{lastName}}</td>
+					</tr>
+					<tr>
+						<td><strong>Roll Number</strong></td>
+						<td>{{rollNum}}</td>
+					</tr>
+					<tr>
+						<td><strong>Branch</strong></td>
+						<td>{{branch}}</td>
+					</tr>
+					<tr>
+						<td><strong>Year of Passing</strong></td>
+						<td>{{passingYear}}</td>
+					</tr>
+					<tr>
+						<td><strong>contact Num</strong></td>
+						<td>{{phone}}</td>
+					</tr>
+					<tr>
+						<td><strong>Email</strong> </td>
+						<td>{{email}}</td>
+					</tr>
+					<tr>
+						<td><strong>Address </strong></td>
+						<td>{{address}}</td>
+					</tr>
+					<tr>
+						<td><strong>City</strong> </td>
+						<td>{{city}}</td>
+					</tr>
+					<tr>
+						<td><strong>State</strong></td>
+						<td>{{state}}</td>
+					</tr>
+					<tr>
+						<td><strong>Pin Code</strong></td>
+						<td>{{zip}}</td>
+					</tr>
+				</table>
 				{{/with}}
 
-				<p>	Documents Required : </p>
-				<div>
-				{{#each docDetails}}	
-					
-					<ul> 
+				<p>	<strong>Documents Required:</strong> </p>
+				<div class="well">
+				{{#each docDetails}}
+
+					<ul>
 						<li>{{this}}</li>
 					</ul>
 				{{/each}}
@@ -53,7 +77,7 @@
 		</div>
 
 		<div class="col-sm-2"></div>
-			
+
 	</div>
 
 	<div class="row">
@@ -63,7 +87,7 @@
 		</div>
 		<div class="col-sm-1"></div>
 		<div class="col-sm-2">
-			<button type="submit" class="btn btn-primary" > Go to detals<span class="glyphicon glyphicon-send"></span></button>
+			<button type="submit" class="btn btn-primary" > Go to details<span class="glyphicon glyphicon-send"></span></button>
 		</div>
 		<div class="col-sm-1"></div>
 		<div class="col-sm-2">
@@ -71,9 +95,9 @@
 		</div>
 		<div class="col-sm-2"></div>
 	</div>
-	
+</div>
 
 	{{/if}}
-	
+
 
 </template>
