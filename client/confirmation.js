@@ -53,15 +53,29 @@ Template.confirmation.events({
 
 
 
-		Requests.insert({
+		var rId = Requests.insert({
 			createdAt : new Date(),
 			userId : Meteor.userId(),
 			userEmail : e,
 			docs : arr,
-			status : "processing"
+			status : "processing",
+			paymentReceived : 'no'
 		});
 
-		Router.go('success');
+		Session.set('rcol',rId);
+		var money = Session.get('total');
+		console.log(money);
+		Meteor.call('paymentRequest',money,function(error,result){
+			if(error){
+				console.log(error);
+			}
+			else{
+				
+				console.log(result);
+				window.location = result;
+			}
+		});
+		// Router.go('success');
 	},
 
 	'click .btn-warning': function(event){
